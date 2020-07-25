@@ -1,0 +1,83 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/06/2020, 16:02:10
+    Author     : elcy.arruda
+*/
+
+/*TOP BAR TOP FIXO.*/
+.wa-topbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    min-height: 50px;
+    z-index: 9999;
+
+    background-color: #1e94d2;
+
+
+
+}
+/*pega todas as img */
+.wa-topbar > img{
+    margin-top: 10px;
+    margin-left: 5px;
+
+}
+
+/*SIDEBAR MENU DA BARRA*/
+.wa-menubar{
+    top: 50px;
+    bottom: 0;
+    left: 0;
+    width: 210px;
+    z-index: 9998;
+    position: fixed;
+    margin-left:  -211px;
+    transition: margin-left 0.5s;
+    overflow-y:  auto; /*barra de rolagem*/
+
+
+    background-color: #f6f6f6;
+    border-right: 1px solid #eaeaea;
+
+
+}
+.wa-menubar.is-toggled {
+    margin-left: 0px;
+}
+
+
+
+/*intercambiar*/
+@media(min-width: 960px){
+    .wa-menubar{
+        margin-left: 0px;
+    }
+    
+    .wa-menubar.is-toggled{
+        margin-left: -211px;
+    }
+}
+
+    /*CONTENT*/
+    .wa-content{
+        padding: 0 15px;
+        margin-top: 50px;
+        transition: margin-left 0.5s;
+    }
+    /*intercambiar*/
+    @media(min-width: 960px){
+        .wa-content{
+            margin-left: 210px;
+        }
+        .wa-content.is-toggled{
+            margin-left: 0;
+        }
+    }
+
+
